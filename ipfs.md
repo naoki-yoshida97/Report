@@ -69,6 +69,8 @@ Daemon is ready
 
 ## ipfsコマンド
 コマンド系はLinuxで検証する
+
+
 '''
 ipfs --help
 USAGE
@@ -161,7 +163,11 @@ SUBCOMMANDS
   For more information about each command, use:
   'ipfs <subcmd> --help'
 '''
+
+
 ipfs mount をするにはソースコードからインストールしないといけないらしい
+
+
 '''
 ipfs mount
 Error: unable to check fuse version.
