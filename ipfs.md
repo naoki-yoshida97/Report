@@ -37,7 +37,9 @@ Error: resource temporarily unavailable
 https://docs.ipfs.io/how-to/command-line-quick-start/#initialize-the-repository
 を参照にしてみた
 IPFSに対してパスを通して ipfs deamon を実行してみたら
-'''
+
+
+''' bash
 Initializing daemon...
 go-ipfs version: 0.10.0
 Repo version: 11
@@ -71,7 +73,7 @@ Daemon is ready
 コマンド系はLinuxで検証する
 
 
-'''
+''' bash
 ipfs --help
 USAGE
   ipfs  - Global p2p merkle-dag filesystem.
@@ -168,7 +170,7 @@ SUBCOMMANDS
 ipfs mount をするにはソースコードからインストールしないといけないらしい
 
 
-'''
+''' bash
 ipfs mount
 Error: unable to check fuse version.
 
