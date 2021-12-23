@@ -5,7 +5,9 @@ IPFSのインストール
   - こちらに関しては後日詳細 (Linuxで行う)
 
 ターミナルで 　deamon を起動させようとして
-'''
+
+
+```bash
 ipfs daemon
 Initializing daemon...
 go-ipfs version: 0.10.0
@@ -14,11 +16,13 @@ System version: amd64/darwin
 Golang version: go1.16.8
 
 Error: lock /Users/hoge/.ipfs/repo.lock: someone else has the lock
-'''
+```
 とエラーが出たので
 https://github.com/ipfs-inactive/support/issues/12
 を参考にしたら新たに
-'''
+
+
+```bash
 ipfs daemon
 Initializing daemon...
 go-ipfs version: 0.10.0
@@ -27,7 +31,8 @@ System version: amd64/darwin
 Golang version: go1.16.8
 
 Error: resource temporarily unavailable
-'''
+```
+
 となってしまった。
 加えてGUIまで起動しなくなってしまった
 *GUIが常時起動ではなくメニューバーから開けることを確認
@@ -39,7 +44,7 @@ https://docs.ipfs.io/how-to/command-line-quick-start/#initialize-the-repository
 IPFSに対してパスを通して ipfs deamon を実行してみたら
 
 
-''' bash
+```bash
 Initializing daemon...
 go-ipfs version: 0.10.0
 Repo version: 11
@@ -63,17 +68,17 @@ API server listening on /ip4/127.0.0.1/tcp/5001
 WebUI: http://127.0.0.1:5001/webui
 Gateway (readonly) server listening on /ip4/127.0.0.1/tcp/8080
 Daemon is ready
-'''
+```
+
 となった。どういうこと？
 推測だが、ノードとして立っているだけと感じた。
 ここからはファイルのアップロードは不可能かもしれない(要調査)
 おそらくGUIからでないとアップロードできないと思う。
 
 ## ipfsコマンド
-コマンド系はLinuxで検証する
 
 
-''' bash
+```bash
 ipfs --help
 USAGE
   ipfs  - Global p2p merkle-dag filesystem.
@@ -164,13 +169,13 @@ SUBCOMMANDS
 
   For more information about each command, use:
   'ipfs <subcmd> --help'
-'''
+```
 
 
 ipfs mount をするにはソースコードからインストールしないといけないらしい
 
 
-''' bash
+```bash
 ipfs mount
 Error: unable to check fuse version.
 
@@ -196,7 +201,7 @@ version you have by running:
 can't load package: package github.com/jbenet/go-fuse-version/fuse-version: cannot find package "github.com/jbenet/go-fuse-version/fuse-version" in any of:
 	/usr/local/go/src/github.com/jbenet/go-fuse-version/fuse-version (from $GOROOT)
 	/Users/naoki/go/src/github.com/jbenet/go-fuse-version/fuse-version (from $GOPATH)
-'''
+```
 
 
 画像のアップロード
